@@ -1,0 +1,9 @@
+base_url: "https://dummyjson.com"
+
+endpoints:
+  posts: "/posts"
+  comments: "/comments"
+  users: "/users"
+
+pagination:
+  page_size: 10
