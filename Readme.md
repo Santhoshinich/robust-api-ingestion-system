@@ -127,6 +127,74 @@ python main_v6.py --mode soap --endpoint calculator
 
 ---
 
+## 🔄 Evolution of the Pipeline (v1 → v6)
+
+### 🟢 v1 — Basic API Call
+
+* Single script
+* Fetch data from REST API
+* No structure, no modularity
+
+---
+
+### 🟢 v2 — Pagination + Storage
+
+* Added pagination handling
+* Stored raw (JSON) and processed (CSV) data
+* Introduced basic project structure
+
+---
+
+### 🟢 v3 — Retry + Logging
+
+* Implemented retry logic (exponential backoff)
+* Added structured logging
+* Improved fault tolerance
+
+---
+
+### 🟢 v4 — CLI + Config-Driven
+
+* Added CLI (`--endpoint`)
+* Config-driven pipeline (`config.yaml`)
+* Removed hardcoded values
+
+---
+
+### 🟢 v5 — Modular Pipeline + Incremental Loading
+
+* Introduced pipeline architecture
+* Separated ingestion, transformation, storage
+* Implemented:
+
+  * ID-based incremental loading
+  * Timestamp-based ingestion
+* Added metadata tracking
+
+---
+
+### 🟢 v6 — SOAP Integration + Advanced Features
+
+* Added SOAP client (WSDL-based integration)
+* Unified REST + SOAP pipeline
+* Implemented:
+
+  * CDC simulation (Insert/Update/Delete)
+  * Data normalization layer
+* Added CI/CD with GitHub Actions
+
+---
+
+### 🚀 Final Version (Current)
+
+* Modular, scalable pipeline
+* Supports REST & SOAP
+* Incremental + idempotent processing
+* CI/CD enabled
+* Production-style architecture
+
+---
+
 ## 🔄 Incremental Processing
 
 * Tracks last processed data using metadata
