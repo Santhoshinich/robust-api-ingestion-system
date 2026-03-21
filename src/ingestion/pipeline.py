@@ -66,3 +66,25 @@ class DataPipeline:
             logging.info(f"Updated timestamp to {latest_ts}")
 
         logging.info(f"Updated last_id to {max_id}")
+
+    def run_soap(self, endpoint_name, method, params=None):
+        import logging
+
+        logging.info(f"Running SOAP pipeline for {endpoint_name}")
+
+        data = self.client.fetch_data(method, params)
+
+        if not data:
+            logging.info("No data returned from SOAP API")
+            return
+
+    # Save raw
+        self.storage.save_raw(data, endpoint_name)
+
+    # Transform
+        processed_data = self.transformer.transform(data)
+
+    # Save processed
+        self.storage.save_processed(processed_data, endpoint_name)
+
+        logging.info(f"SOAP pipeline completed with {len(data)} records")

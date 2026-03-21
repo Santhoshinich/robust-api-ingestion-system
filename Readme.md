@@ -2,54 +2,94 @@
 
 ## 📌 Overview
 
-This project implements a **production-style data ingestion pipeline** that retrieves data from external APIs, processes it, and stores it in structured formats.
-It demonstrates core data engineering concepts such as **API integration, incremental loading, modular pipeline design, and CI/CD automation**.
+This project implements a **production-grade data ingestion pipeline** supporting both **REST and SOAP APIs**, with incremental processing, modular architecture, and CI/CD automation.
 
 ---
 
 ## ⚙️ Features
 
-* 🔌 REST API ingestion with pagination support
+* 🔌 REST API ingestion (JSON, pagination, retry)
+* 🧾 SOAP API integration (WSDL, XML → structured data)
 * 🔁 Retry logic with exponential backoff
-* 📊 Structured logging for observability
-* 🧩 Modular pipeline architecture (ingestion, transformation, storage)
+* 📊 Logging and observability
+* 🧩 Modular pipeline architecture
 * 🧠 Incremental loading:
 
   * ID-based watermarking
-  * Timestamp-based ingestion (`updated_at`)
-* 🔄 CDC simulation (Insert/Update/Delete handling)
-* 🧪 Basic testing using `pytest`
-* ⚡ CI/CD pipeline using GitHub Actions
+  * Timestamp-based ingestion
+* 🔄 CDC simulation (Insert/Update/Delete)
 * 💻 CLI-based execution
+* 🧪 Testing with pytest
+* ⚡ CI/CD with GitHub Actions
 
 ---
 
 ## 🏗️ Architecture
 
-```
-API Client → Data Pipeline → Transformer → Storage
-                        ↓
-                    Metadata (watermark)
+```plaintext
+          ┌──────────────┐
+          │  REST API    │
+          └──────┬───────┘
+                 │
+          ┌──────▼───────┐
+          │ API Client   │
+          └──────┬───────┘
+                 │
+          ┌──────▼───────┐
+          │              │
+          │  Pipeline    │
+          │              │
+          └──────┬───────┘
+                 │
+          ┌──────▼────────┐
+          │ Transformer   │
+          └──────┬────────┘
+                 │
+          ┌──────▼────────┐
+          │ Storage       │
+          └──────┬────────┘
+                 │
+          ┌──────▼────────┐
+          │ Metadata      │
+          │ (Watermark)   │
+          └───────────────┘
+
+          ┌──────────────┐
+          │  SOAP API    │
+          └──────┬───────┘
+                 │
+          ┌──────▼───────┐
+          │ SOAP Client  │
+          └──────────────┘
 ```
 
-### Components:
+---
 
-* **API Client** → Handles API calls, pagination, retry
-* **Pipeline** → Orchestrates ingestion and processing
-* **Transformer** → Cleans, deduplicates, and enriches data
-* **Storage** → Saves raw and processed datasets
-* **Metadata** → Tracks incremental progress
+## 🔌 API Integration
+
+### REST
+
+* JSON-based APIs
+* Pagination using `limit` and `skip`
+* Dynamic endpoint handling
+
+### SOAP
+
+* WSDL-based service integration
+* XML → Python normalization
+* Unified processing with REST pipeline
 
 ---
 
 ## 📂 Project Structure
 
-```
+```plaintext
 api_ingestion_engine/
 │
 ├── src/
 │   ├── ingestion/
 │   │   ├── api_client.py
+│   │   ├── soap_client.py
 │   │   └── pipeline.py
 │   ├── processors/
 │   │   └── transformer.py
@@ -64,9 +104,8 @@ api_ingestion_engine/
 ├── tests/
 │   └── test_pipeline.py
 │
-├── main_v5.py
+├── main_v6.py
 ├── requirements.txt
-├── README.md
 └── .github/workflows/pipeline.yml
 ```
 
@@ -74,42 +113,36 @@ api_ingestion_engine/
 
 ## ▶️ How to Run
 
-### 1. Install dependencies
+### REST Pipeline
 
-```
-pip install -r requirements.txt
-```
-
-### 2. Run pipeline
-
-```
-python main_v5.py --endpoint posts
+```bash
+python main_v6.py --mode rest --endpoint posts
 ```
 
-### 3. Run tests
+### SOAP Pipeline
 
-```
-pytest
+```bash
+python main_v6.py --mode soap --endpoint calculator
 ```
 
 ---
 
-## 🔄 Incremental Loading Strategy
+## 🔄 Incremental Processing
 
-* Uses **watermarking** to track last processed data
+* Tracks last processed data using metadata
 * Supports:
 
-  * `last_id` (basic incremental)
-  * `updated_at` (advanced incremental)
-* Prevents duplicate processing and ensures idempotency
+  * `last_id`
+  * `updated_at`
+* Ensures idempotent pipeline execution
 
 ---
 
-## 📊 Example Output
+## 📊 Outputs
 
-* Raw data → `data/raw/` (JSON format)
-* Processed data → `data/processed/` (CSV format)
-* Logs → `logs/app.log`
+* Raw → `data/raw/`
+* Processed → `data/processed/`
+* Logs → `logs/`
 * Metadata → `data/metadata.json`
 
 ---
@@ -118,7 +151,7 @@ pytest
 
 GitHub Actions pipeline:
 
-* Runs on every push / PR
+* Runs on push and PR
 * Installs dependencies
 * Executes pipeline
 * Runs tests
@@ -130,6 +163,7 @@ GitHub Actions pipeline:
 * Python
 * Pandas
 * Requests
+* Zeep (SOAP client)
 * PyYAML
 * Pytest
 * GitHub Actions
@@ -138,10 +172,10 @@ GitHub Actions pipeline:
 
 ## 📚 Key Learnings
 
-* Designing **idempotent data pipelines**
-* Implementing **incremental ingestion (ID + timestamp)**
-* Handling unreliable APIs with **retry strategies**
-* Building **modular and scalable data systems**
+* Designing **modular data pipelines**
+* Handling **REST and SOAP integrations**
+* Implementing **incremental data processing**
+* Managing **data consistency and idempotency**
 * Applying **CI/CD to data engineering workflows**
 
 ---
@@ -149,8 +183,8 @@ GitHub Actions pipeline:
 ## 🚀 Next Steps
 
 * Add orchestration (Airflow / Azure Data Factory)
-* Integrate with cloud storage (AWS S3 / Azure Data Lake)
-* Implement real-time streaming (Kafka / Event Hub)
+* Integrate cloud storage (S3 / ADLS)
+* Implement real-time streaming (Kafka/Event Hub)
 
 ---
 
