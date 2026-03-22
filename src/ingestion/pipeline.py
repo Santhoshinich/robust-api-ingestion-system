@@ -16,7 +16,7 @@ class DataPipeline:
 
     def run(self, endpoint_name, endpoint, page_size):
         logging.info(f"Running pipeline for {endpoint_name}")
-        raise Exception("Test Slack Alert - REST Failure")    # can be removed after testing
+        # raise Exception("Test Slack Alert - REST Failure")    # can be removed after testing
 
         last_id = get_last_id(endpoint_name)
         last_ts = get_last_timestamp(endpoint_name)
