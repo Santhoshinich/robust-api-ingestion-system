@@ -1,83 +1,98 @@
-# 🚀 API Ingestion Engine (Project 2)
+# 🚀 API Ingestion Engine
 
 ## 📌 Overview
 
-This project implements a **production-grade data ingestion pipeline** supporting both **REST and SOAP APIs**, with incremental processing, modular architecture, and CI/CD automation.
+This project implements a **production-grade data ingestion pipeline** supporting both **REST and SOAP APIs**, with **incremental processing, data quality validation, Airflow orchestration, and real-time alerting**.
+
+It simulates a **real-world data engineering system** with modular design, observability, and workflow automation.
 
 ---
 
 ## ⚙️ Features
 
-* 🔌 REST API ingestion (JSON, pagination, retry)
-* 🧾 SOAP API integration (WSDL, XML → structured data)
-* 🔁 Retry logic with exponential backoff
-* 📊 Logging and observability
-* 🧩 Modular pipeline architecture
-* 🧠 Incremental loading:
+### 🔌 Ingestion
 
-  * ID-based watermarking
-  * Timestamp-based ingestion
-* 🔄 CDC simulation (Insert/Update/Delete)
-* 💻 CLI-based execution
-* 🧪 Testing with pytest
-* ⚡ CI/CD with GitHub Actions
+* REST API ingestion (JSON, pagination, retry)
+* SOAP API integration (WSDL, XML → structured data)
+* Unified processing framework for REST + SOAP
+
+### 🔁 Incremental Processing
+
+* ID-based watermarking
+* Timestamp-based ingestion
+* Idempotent pipeline execution
+* CDC simulation (Insert/Update/Delete)
+
+### 📊 Data Quality Layer (NEW 🚀)
+
+* Required field validation
+* Null checks
+* Endpoint-specific rules
+* Fail-fast validation (breaks pipeline on bad data)
+
+### ⚡ Orchestration (Airflow - NEW 🚀)
+
+* Dockerized Apache Airflow
+* Dynamic DAG generation (config-driven)
+* Parallel REST ingestion tasks
+* Dependency chaining (REST → SOAP)
+
+### 📡 Observability & Alerting (NEW 🚀)
+
+* Structured logging across pipeline
+* Airflow UI monitoring
+* Slack alerts on task failure (real-time)
+
+### 🧩 Architecture Design
+
+* Config-driven pipelines (`config.yaml`)
+* Modular components:
+
+  * API clients
+  * Pipeline engine
+  * Transformer
+  * Storage layer
+  * Metadata tracking
 
 ---
 
 ## 🏗️ Architecture
 
 ```plaintext
-          ┌──────────────┐
-          │  REST API    │
-          └──────┬───────┘
+REST APIs ───────┐
                  │
-          ┌──────▼───────┐
-          │ API Client   │
-          └──────┬───────┘
+                 ▼
+           API Client
                  │
-          ┌──────▼───────┐
-          │              │
-          │  Pipeline    │
-          │              │
-          └──────┬───────┘
+                 ▼
+             Pipeline
                  │
-          ┌──────▼────────┐
-          │ Transformer   │
-          └──────┬────────┘
+     ┌───────────┼───────────┐
+     ▼           ▼           ▼
+Transformer   Data Quality   Metadata
+     │           │           │
+     └──────► Storage ◄──────┘
                  │
-          ┌──────▼────────┐
-          │ Storage       │
-          └──────┬────────┘
-                 │
-          ┌──────▼────────┐
-          │ Metadata      │
-          │ (Watermark)   │
-          └───────────────┘
+        Raw / Processed Data
 
-          ┌──────────────┐
-          │  SOAP API    │
-          └──────┬───────┘
-                 │
-          ┌──────▼───────┐
-          │ SOAP Client  │
-          └──────────────┘
+SOAP API ──► SOAP Client ──► Same Pipeline
 ```
 
 ---
 
-## 🔌 API Integration
+## 🔄 Airflow DAG Workflow (NEW)
 
-### REST
+```plaintext
+rest_posts
+rest_users
+rest_comments
+        ↓
+   soap_calculator
+```
 
-* JSON-based APIs
-* Pagination using `limit` and `skip`
-* Dynamic endpoint handling
-
-### SOAP
-
-* WSDL-based service integration
-* XML → Python normalization
-* Unified processing with REST pipeline
+* REST tasks run **in parallel**
+* SOAP runs **after REST completion**
+* Fully **dynamic DAG based on config**
 
 ---
 
@@ -88,121 +103,86 @@ api_ingestion_engine/
 │
 ├── src/
 │   ├── ingestion/
-│   │   ├── api_client.py
-│   │   ├── soap_client.py
-│   │   └── pipeline.py
 │   ├── processors/
-│   │   └── transformer.py
 │   ├── utils/
-│   │   ├── logger.py
-│   │   ├── retry.py
-│   │   ├── storage.py
-│   │   └── metadata.py
 │   └── config/
-│       └── config.yaml
+│
+├── airflow-docker/
+│   └── dags/
 │
 ├── tests/
-│   └── test_pipeline.py
-│
 ├── main_v6.py
 ├── requirements.txt
-└── .github/workflows/pipeline.yml
+└── .github/workflows/
 ```
 
 ---
 
 ## ▶️ How to Run
 
-### REST Pipeline
+### 🔹 Local (CLI)
 
 ```bash
 python main_v6.py --mode rest --endpoint posts
-```
-
-### SOAP Pipeline
-
-```bash
 python main_v6.py --mode soap --endpoint calculator
 ```
 
 ---
 
-## 🔄 Evolution of the Pipeline (v1 → v6)
+### 🔹 Airflow (Docker)
+
+```bash
+docker-compose up
+```
+
+Access UI:
+
+```plaintext
+http://localhost:8080
+```
+
+---
+
+## 🔄 Evolution of the Pipeline (v1 → v7)
 
 ### 🟢 v1 — Basic API Call
 
 * Single script
-* Fetch data from REST API
-* No structure, no modularity
-
----
+* No structure
 
 ### 🟢 v2 — Pagination + Storage
 
-* Added pagination handling
-* Stored raw (JSON) and processed (CSV) data
-* Introduced basic project structure
-
----
+* Pagination support
+* Raw + processed storage
 
 ### 🟢 v3 — Retry + Logging
 
-* Implemented retry logic (exponential backoff)
-* Added structured logging
-* Improved fault tolerance
+* Exponential backoff
+* Structured logs
 
----
+### 🟢 v4 — CLI + Config
 
-### 🟢 v4 — CLI + Config-Driven
+* CLI arguments
+* Config-driven design
 
-* Added CLI (`--endpoint`)
-* Config-driven pipeline (`config.yaml`)
-* Removed hardcoded values
+### 🟢 v5 — Modular + Incremental
 
----
+* Pipeline architecture
+* Watermarking (ID + timestamp)
 
-### 🟢 v5 — Modular Pipeline + Incremental Loading
+### 🟢 v6 — SOAP + CDC + CI/CD
 
-* Introduced pipeline architecture
-* Separated ingestion, transformation, storage
-* Implemented:
+* SOAP integration
+* CDC simulation
+* GitHub Actions
 
-  * ID-based incremental loading
-  * Timestamp-based ingestion
-* Added metadata tracking
+### 🔥 v7 — Production Orchestration (CURRENT)
 
----
-
-### 🟢 v6 — SOAP Integration + Advanced Features
-
-* Added SOAP client (WSDL-based integration)
-* Unified REST + SOAP pipeline
-* Implemented:
-
-  * CDC simulation (Insert/Update/Delete)
-  * Data normalization layer
-* Added CI/CD with GitHub Actions
-
----
-
-### 🚀 Final Version (Current)
-
-* Modular, scalable pipeline
-* Supports REST & SOAP
-* Incremental + idempotent processing
-* CI/CD enabled
-* Production-style architecture
-
----
-
-## 🔄 Incremental Processing
-
-* Tracks last processed data using metadata
-* Supports:
-
-  * `last_id`
-  * `updated_at`
-* Ensures idempotent pipeline execution
+* Airflow DAG (dynamic)
+* Parallel task execution
+* Data quality validation layer
+* Slack alert integration
+* Dockerized orchestration
 
 ---
 
@@ -210,19 +190,30 @@ python main_v6.py --mode soap --endpoint calculator
 
 * Raw → `data/raw/`
 * Processed → `data/processed/`
-* Logs → `logs/`
 * Metadata → `data/metadata.json`
+* Logs → Airflow UI + local logs
+
+---
+
+## 🚨 Alerting (NEW)
+
+* Slack webhook integration
+* Real-time alerts on:
+
+  * Task failure
+  * Data quality failure
+* Includes DAG, task, and error details
 
 ---
 
 ## 🧪 CI/CD
 
-GitHub Actions pipeline:
+GitHub Actions:
 
 * Runs on push and PR
 * Installs dependencies
-* Executes pipeline
-* Runs tests
+* Executes tests
+* Validates pipeline integrity
 
 ---
 
@@ -232,27 +223,30 @@ GitHub Actions pipeline:
 * Pandas
 * Requests
 * Zeep (SOAP client)
+* Apache Airflow (Docker)
 * PyYAML
 * Pytest
 * GitHub Actions
+* Slack Webhooks
 
 ---
 
 ## 📚 Key Learnings
 
-* Designing **modular data pipelines**
-* Handling **REST and SOAP integrations**
-* Implementing **incremental data processing**
-* Managing **data consistency and idempotency**
-* Applying **CI/CD to data engineering workflows**
+* Designing scalable ingestion pipelines
+* Handling REST + SOAP integration in one system
+* Implementing incremental + idempotent processing
+* Building dynamic Airflow DAGs
+* Adding production-grade observability and alerting
 
 ---
 
 ## 🚀 Next Steps
 
-* Add orchestration (Airflow / Azure Data Factory)
-* Integrate cloud storage (S3 / ADLS)
-* Implement real-time streaming (Kafka/Event Hub)
+* Migrate to Azure (ADLS Gen2)
+* Integrate Azure Data Factory
+* Implement cloud-native orchestration
+* Add secrets management (Key Vault)
 
 ---
 

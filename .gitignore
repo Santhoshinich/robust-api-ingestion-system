@@ -2,12 +2,18 @@
 __pycache__/
 *.pyc
 
-# Data files
-data/
-logs/
+# Data
+data/raw/
+data/processed/
+data/metadata.json
+
+# Airflow
+airflow-docker/logs/
+airflow-docker/airflow.db
 
 # Env
 .env
 
 # OS
 .DS_Store
+Thumbs.db

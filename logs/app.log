@@ -1,0 +1,468 @@
+2026-03-20 12:49:47,643 - INFO - Starting ingestion pipeline
+2026-03-20 12:52:17,679 - INFO - Starting ingestion pipeline
+2026-03-20 12:52:17,680 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 12:52:18,468 - INFO - Fetched page with 10 records
+2026-03-20 12:52:18,468 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 12:52:18,966 - INFO - Fetched page with 10 records
+2026-03-20 12:52:18,966 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 12:52:19,584 - INFO - Fetched page with 10 records
+2026-03-20 12:52:19,584 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 12:52:20,194 - INFO - Fetched page with 10 records
+2026-03-20 12:52:20,195 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 12:52:20,809 - INFO - Fetched page with 10 records
+2026-03-20 12:52:20,809 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 12:52:21,424 - INFO - Fetched page with 10 records
+2026-03-20 12:52:21,424 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 12:52:22,040 - INFO - Fetched page with 10 records
+2026-03-20 12:52:22,040 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 12:52:22,755 - INFO - Fetched page with 10 records
+2026-03-20 12:52:22,755 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 12:52:23,272 - INFO - Fetched page with 10 records
+2026-03-20 12:52:23,273 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 12:52:24,293 - INFO - Fetched page with 10 records
+2026-03-20 12:52:24,293 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 12:52:25,007 - INFO - Fetched page with 10 records
+2026-03-20 12:52:25,007 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 12:52:25,628 - INFO - Fetched page with 10 records
+2026-03-20 12:52:25,628 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 12:52:26,133 - INFO - Fetched page with 10 records
+2026-03-20 12:52:26,133 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 12:52:26,646 - INFO - Fetched page with 10 records
+2026-03-20 12:52:26,646 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 12:52:27,262 - INFO - Fetched page with 10 records
+2026-03-20 12:52:27,262 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 12:52:27,773 - INFO - Fetched page with 10 records
+2026-03-20 12:52:27,774 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 12:52:28,288 - INFO - Fetched page with 10 records
+2026-03-20 12:52:28,288 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 12:52:28,721 - INFO - Fetched page with 10 records
+2026-03-20 12:52:28,721 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 12:52:29,206 - INFO - Fetched page with 10 records
+2026-03-20 12:52:29,207 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 12:52:29,625 - INFO - Fetched page with 10 records
+2026-03-20 12:52:29,626 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 12:52:30,127 - INFO - Fetched page with 10 records
+2026-03-20 12:52:30,127 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 12:52:30,640 - INFO - Fetched page with 10 records
+2026-03-20 12:52:30,640 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 12:52:31,113 - INFO - Fetched page with 10 records
+2026-03-20 12:52:31,113 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 12:52:31,571 - INFO - Fetched page with 10 records
+2026-03-20 12:52:31,571 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 12:52:32,072 - INFO - Fetched page with 10 records
+2026-03-20 12:52:32,072 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 12:52:32,585 - INFO - Fetched page with 1 records
+2026-03-20 12:52:32,610 - INFO - Total records processed: 251
+2026-03-20 12:53:18,055 - INFO - Starting ingestion pipeline
+2026-03-20 12:53:18,056 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 12:53:18,564 - INFO - Fetched page with 10 records
+2026-03-20 12:53:18,564 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 12:53:19,077 - INFO - Fetched page with 10 records
+2026-03-20 12:53:19,077 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 12:53:19,589 - INFO - Fetched page with 10 records
+2026-03-20 12:53:19,590 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 12:53:20,306 - INFO - Fetched page with 10 records
+2026-03-20 12:53:20,306 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 12:53:20,919 - INFO - Fetched page with 10 records
+2026-03-20 12:53:20,919 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 12:53:21,431 - INFO - Fetched page with 10 records
+2026-03-20 12:53:21,431 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 12:53:22,046 - INFO - Fetched page with 10 records
+2026-03-20 12:53:22,046 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 12:53:22,521 - INFO - Fetched page with 10 records
+2026-03-20 12:53:22,521 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 12:53:23,072 - INFO - Fetched page with 10 records
+2026-03-20 12:53:23,072 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 12:53:24,709 - INFO - Fetched page with 10 records
+2026-03-20 12:53:24,710 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 12:53:25,838 - INFO - Fetched page with 10 records
+2026-03-20 12:53:25,839 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 12:53:27,043 - INFO - Fetched page with 10 records
+2026-03-20 12:53:27,044 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 12:53:28,092 - INFO - Fetched page with 10 records
+2026-03-20 12:53:28,093 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 12:53:29,418 - INFO - Fetched page with 10 records
+2026-03-20 12:53:29,419 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 12:53:30,652 - INFO - Fetched page with 10 records
+2026-03-20 12:53:30,653 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 12:53:31,876 - INFO - Fetched page with 10 records
+2026-03-20 12:53:31,877 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 12:53:32,800 - INFO - Fetched page with 10 records
+2026-03-20 12:53:32,801 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 12:53:34,131 - INFO - Fetched page with 10 records
+2026-03-20 12:53:34,133 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 12:53:35,669 - INFO - Fetched page with 10 records
+2026-03-20 12:53:35,671 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 12:53:37,103 - INFO - Fetched page with 10 records
+2026-03-20 12:53:37,104 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 12:53:38,740 - INFO - Fetched page with 10 records
+2026-03-20 12:53:38,742 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 12:53:40,072 - INFO - Fetched page with 10 records
+2026-03-20 12:53:40,073 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 12:53:41,298 - INFO - Fetched page with 10 records
+2026-03-20 12:53:41,300 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 12:53:42,530 - INFO - Fetched page with 10 records
+2026-03-20 12:53:42,531 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 12:53:43,933 - INFO - Fetched page with 10 records
+2026-03-20 12:53:43,934 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 12:53:45,291 - INFO - Fetched page with 1 records
+2026-03-20 12:53:45,325 - INFO - Total records processed: 251
+2026-03-20 12:57:59,154 - INFO - Starting ingestion pipeline
+2026-03-20 12:59:19,582 - INFO - Starting ingestion pipeline
+2026-03-20 12:59:19,584 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 12:59:20,157 - INFO - Fetched page with 10 records
+2026-03-20 12:59:20,158 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 12:59:20,661 - INFO - Fetched page with 10 records
+2026-03-20 12:59:20,662 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 12:59:21,130 - INFO - Fetched page with 10 records
+2026-03-20 12:59:21,131 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 12:59:21,654 - INFO - Fetched page with 10 records
+2026-03-20 12:59:21,655 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 12:59:22,197 - INFO - Fetched page with 10 records
+2026-03-20 12:59:22,198 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 12:59:22,914 - INFO - Fetched page with 10 records
+2026-03-20 12:59:22,914 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 12:59:24,757 - INFO - Fetched page with 10 records
+2026-03-20 12:59:24,758 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 12:59:26,091 - INFO - Fetched page with 10 records
+2026-03-20 12:59:26,092 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 12:59:27,529 - INFO - Fetched page with 10 records
+2026-03-20 12:59:27,531 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 12:59:28,855 - INFO - Fetched page with 10 records
+2026-03-20 12:59:28,856 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 12:59:30,189 - INFO - Fetched page with 10 records
+2026-03-20 12:59:30,191 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 12:59:31,525 - INFO - Fetched page with 10 records
+2026-03-20 12:59:31,526 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 12:59:32,746 - INFO - Fetched page with 10 records
+2026-03-20 12:59:32,747 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 12:59:33,977 - INFO - Fetched page with 10 records
+2026-03-20 12:59:33,979 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 12:59:35,306 - INFO - Fetched page with 10 records
+2026-03-20 12:59:35,307 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 12:59:36,743 - INFO - Fetched page with 10 records
+2026-03-20 12:59:36,744 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 12:59:38,072 - INFO - Fetched page with 10 records
+2026-03-20 12:59:38,085 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 12:59:39,404 - INFO - Fetched page with 10 records
+2026-03-20 12:59:39,406 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 12:59:40,737 - INFO - Fetched page with 10 records
+2026-03-20 12:59:40,738 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 12:59:41,964 - INFO - Fetched page with 10 records
+2026-03-20 12:59:41,965 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 12:59:42,988 - INFO - Fetched page with 10 records
+2026-03-20 12:59:42,989 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 12:59:43,495 - INFO - Fetched page with 10 records
+2026-03-20 12:59:43,496 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 12:59:44,009 - INFO - Fetched page with 10 records
+2026-03-20 12:59:44,010 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 12:59:44,726 - INFO - Fetched page with 10 records
+2026-03-20 12:59:44,727 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 12:59:45,235 - INFO - Fetched page with 10 records
+2026-03-20 12:59:45,235 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 12:59:45,854 - INFO - Fetched page with 1 records
+2026-03-20 12:59:45,876 - INFO - Total records processed: 251
+2026-03-20 12:59:55,730 - INFO - Starting ingestion pipeline
+2026-03-20 12:59:55,732 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=0
+2026-03-20 12:59:56,299 - INFO - No more data to fetch
+2026-03-20 12:59:56,316 - INFO - Total records processed: 0
+2026-03-20 13:00:05,706 - INFO - Starting ingestion pipeline
+2026-03-20 13:00:05,708 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=0
+2026-03-20 13:00:06,229 - INFO - No more data to fetch
+2026-03-20 13:00:06,239 - INFO - Total records processed: 0
+2026-03-20 13:13:06,305 - INFO - Starting ingestion pipeline
+2026-03-20 13:13:06,308 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=0
+2026-03-20 13:13:06,832 - INFO - Fetched page with 10 records
+2026-03-20 13:13:06,833 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=10
+2026-03-20 13:13:07,360 - INFO - Fetched page with 10 records
+2026-03-20 13:13:07,361 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=20
+2026-03-20 13:13:07,970 - INFO - Fetched page with 10 records
+2026-03-20 13:13:07,970 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=30
+2026-03-20 13:13:08,791 - INFO - Fetched page with 10 records
+2026-03-20 13:13:08,791 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=40
+2026-03-20 13:13:09,301 - INFO - Fetched page with 10 records
+2026-03-20 13:13:09,302 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=50
+2026-03-20 13:13:09,918 - INFO - Fetched page with 10 records
+2026-03-20 13:13:09,918 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=60
+2026-03-20 13:13:10,428 - INFO - Fetched page with 10 records
+2026-03-20 13:13:10,429 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=70
+2026-03-20 13:13:11,043 - INFO - Fetched page with 10 records
+2026-03-20 13:13:11,044 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=80
+2026-03-20 13:13:11,658 - INFO - Fetched page with 10 records
+2026-03-20 13:13:11,658 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=90
+2026-03-20 13:13:12,170 - INFO - Fetched page with 10 records
+2026-03-20 13:13:12,170 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=100
+2026-03-20 13:13:12,784 - INFO - Fetched page with 10 records
+2026-03-20 13:13:12,785 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=110
+2026-03-20 13:13:13,295 - INFO - Fetched page with 10 records
+2026-03-20 13:13:13,296 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=120
+2026-03-20 13:13:13,884 - INFO - Fetched page with 10 records
+2026-03-20 13:13:13,884 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=130
+2026-03-20 13:13:14,421 - INFO - Fetched page with 10 records
+2026-03-20 13:13:14,422 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=140
+2026-03-20 13:13:15,036 - INFO - Fetched page with 10 records
+2026-03-20 13:13:15,036 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=150
+2026-03-20 13:13:15,651 - INFO - Fetched page with 10 records
+2026-03-20 13:13:15,652 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=160
+2026-03-20 13:13:16,164 - INFO - Fetched page with 10 records
+2026-03-20 13:13:16,164 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=170
+2026-03-20 13:13:16,677 - INFO - Fetched page with 10 records
+2026-03-20 13:13:16,677 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=180
+2026-03-20 13:13:17,188 - INFO - Fetched page with 10 records
+2026-03-20 13:13:17,189 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=190
+2026-03-20 13:13:17,801 - INFO - Fetched page with 10 records
+2026-03-20 13:13:17,802 - INFO - Calling API: https://dummyjson.com/users?limit=10&skip=200
+2026-03-20 13:13:18,417 - INFO - Fetched page with 8 records
+2026-03-20 13:13:18,489 - INFO - Total records processed: 208
+2026-03-20 13:13:22,475 - INFO - Starting ingestion pipeline
+2026-03-20 13:13:22,477 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=0
+2026-03-20 13:13:23,126 - INFO - Fetched page with 10 records
+2026-03-20 13:13:23,126 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=10
+2026-03-20 13:13:24,152 - INFO - Fetched page with 10 records
+2026-03-20 13:13:24,152 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=20
+2026-03-20 13:13:24,665 - INFO - Fetched page with 10 records
+2026-03-20 13:13:24,665 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=30
+2026-03-20 13:13:25,175 - INFO - Fetched page with 10 records
+2026-03-20 13:13:25,175 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=40
+2026-03-20 13:13:25,686 - INFO - Fetched page with 10 records
+2026-03-20 13:13:25,686 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=50
+2026-03-20 13:13:26,198 - INFO - Fetched page with 10 records
+2026-03-20 13:13:26,198 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=60
+2026-03-20 13:13:26,710 - INFO - Fetched page with 10 records
+2026-03-20 13:13:26,710 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=70
+2026-03-20 13:13:27,224 - INFO - Fetched page with 10 records
+2026-03-20 13:13:27,224 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=80
+2026-03-20 13:13:27,939 - INFO - Fetched page with 10 records
+2026-03-20 13:13:27,940 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=90
+2026-03-20 13:13:28,456 - INFO - Fetched page with 10 records
+2026-03-20 13:13:28,456 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=100
+2026-03-20 13:13:28,962 - INFO - Fetched page with 10 records
+2026-03-20 13:13:28,962 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=110
+2026-03-20 13:13:29,475 - INFO - Fetched page with 10 records
+2026-03-20 13:13:29,475 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=120
+2026-03-20 13:13:29,986 - INFO - Fetched page with 10 records
+2026-03-20 13:13:29,986 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=130
+2026-03-20 13:13:30,500 - INFO - Fetched page with 10 records
+2026-03-20 13:13:30,500 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=140
+2026-03-20 13:13:31,012 - INFO - Fetched page with 10 records
+2026-03-20 13:13:31,012 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=150
+2026-03-20 13:13:31,626 - INFO - Fetched page with 10 records
+2026-03-20 13:13:31,627 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=160
+2026-03-20 13:13:32,138 - INFO - Fetched page with 10 records
+2026-03-20 13:13:32,138 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=170
+2026-03-20 13:13:32,652 - INFO - Fetched page with 10 records
+2026-03-20 13:13:32,653 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=180
+2026-03-20 13:13:33,268 - INFO - Fetched page with 10 records
+2026-03-20 13:13:33,268 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=190
+2026-03-20 13:13:33,881 - INFO - Fetched page with 10 records
+2026-03-20 13:13:33,882 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=200
+2026-03-20 13:13:34,392 - INFO - Fetched page with 10 records
+2026-03-20 13:13:34,393 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=210
+2026-03-20 13:13:34,903 - INFO - Fetched page with 10 records
+2026-03-20 13:13:34,903 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=220
+2026-03-20 13:13:35,349 - INFO - Fetched page with 10 records
+2026-03-20 13:13:35,349 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=230
+2026-03-20 13:13:35,824 - INFO - Fetched page with 10 records
+2026-03-20 13:13:35,825 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=240
+2026-03-20 13:13:36,338 - INFO - Fetched page with 10 records
+2026-03-20 13:13:36,338 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=250
+2026-03-20 13:13:36,851 - INFO - Fetched page with 10 records
+2026-03-20 13:13:36,852 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=260
+2026-03-20 13:13:37,361 - INFO - Fetched page with 10 records
+2026-03-20 13:13:37,361 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=270
+2026-03-20 13:13:37,976 - INFO - Fetched page with 10 records
+2026-03-20 13:13:37,976 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=280
+2026-03-20 13:13:38,488 - INFO - Fetched page with 10 records
+2026-03-20 13:13:38,488 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=290
+2026-03-20 13:13:39,104 - INFO - Fetched page with 10 records
+2026-03-20 13:13:39,104 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=300
+2026-03-20 13:13:39,616 - INFO - Fetched page with 10 records
+2026-03-20 13:13:39,616 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=310
+2026-03-20 13:13:40,126 - INFO - Fetched page with 10 records
+2026-03-20 13:13:40,126 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=320
+2026-03-20 13:13:40,638 - INFO - Fetched page with 10 records
+2026-03-20 13:13:40,638 - INFO - Calling API: https://dummyjson.com/comments?limit=10&skip=330
+2026-03-20 13:13:41,149 - INFO - Fetched page with 10 records
+2026-03-20 13:13:41,179 - INFO - Total records processed: 340
+2026-03-20 13:30:57,675 - INFO - Starting pipeline system
+2026-03-20 13:30:57,676 - INFO - Running pipeline for posts
+2026-03-20 13:30:57,677 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 13:30:58,284 - INFO - Fetched page with 10 records
+2026-03-20 13:30:58,284 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 13:30:59,001 - INFO - Fetched page with 10 records
+2026-03-20 13:30:59,002 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 13:30:59,717 - INFO - Fetched page with 10 records
+2026-03-20 13:30:59,717 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 13:31:00,333 - INFO - Fetched page with 10 records
+2026-03-20 13:31:00,333 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 13:31:00,947 - INFO - Fetched page with 10 records
+2026-03-20 13:31:00,948 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 13:31:01,459 - INFO - Fetched page with 10 records
+2026-03-20 13:31:01,460 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 13:31:01,971 - INFO - Fetched page with 10 records
+2026-03-20 13:31:01,973 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 13:31:02,686 - INFO - Fetched page with 10 records
+2026-03-20 13:31:02,687 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 13:31:03,300 - INFO - Fetched page with 10 records
+2026-03-20 13:31:03,300 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 13:31:03,813 - INFO - Fetched page with 10 records
+2026-03-20 13:31:03,814 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 13:31:04,324 - INFO - Fetched page with 10 records
+2026-03-20 13:31:04,324 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 13:31:04,945 - INFO - Fetched page with 10 records
+2026-03-20 13:31:04,945 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 13:31:05,556 - INFO - Fetched page with 10 records
+2026-03-20 13:31:05,556 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 13:31:06,169 - INFO - Fetched page with 10 records
+2026-03-20 13:31:06,170 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 13:31:06,783 - INFO - Fetched page with 10 records
+2026-03-20 13:31:06,783 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 13:31:07,398 - INFO - Fetched page with 10 records
+2026-03-20 13:31:07,398 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 13:31:08,014 - INFO - Fetched page with 10 records
+2026-03-20 13:31:08,014 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 13:31:08,623 - INFO - Fetched page with 10 records
+2026-03-20 13:31:08,624 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 13:31:09,240 - INFO - Fetched page with 10 records
+2026-03-20 13:31:09,240 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 13:31:09,753 - INFO - Fetched page with 10 records
+2026-03-20 13:31:09,753 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 13:31:10,368 - INFO - Fetched page with 10 records
+2026-03-20 13:31:10,369 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 13:31:10,978 - INFO - Fetched page with 10 records
+2026-03-20 13:31:10,979 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 13:31:11,596 - INFO - Fetched page with 10 records
+2026-03-20 13:31:11,596 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 13:31:12,315 - INFO - Fetched page with 10 records
+2026-03-20 13:31:12,315 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 13:31:12,928 - INFO - Fetched page with 10 records
+2026-03-20 13:31:12,928 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 13:31:13,441 - INFO - Fetched page with 1 records
+2026-03-20 13:31:13,461 - INFO - Pipeline completed: 251 records
+2026-03-20 13:47:08,477 - INFO - Starting pipeline system
+2026-03-20 13:47:08,482 - INFO - Running pipeline for posts
+2026-03-20 13:47:08,483 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 13:47:09,369 - INFO - Fetched page with 10 records
+2026-03-20 13:47:09,370 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 13:47:10,496 - INFO - Fetched page with 10 records
+2026-03-20 13:47:10,497 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 13:47:11,419 - INFO - Fetched page with 10 records
+2026-03-20 13:47:11,420 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 13:47:12,341 - INFO - Fetched page with 10 records
+2026-03-20 13:47:12,342 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 13:47:13,258 - INFO - Fetched page with 10 records
+2026-03-20 13:47:13,259 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 13:47:14,153 - INFO - Fetched page with 10 records
+2026-03-20 13:47:14,154 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 13:47:14,977 - INFO - Fetched page with 10 records
+2026-03-20 13:47:14,978 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 13:47:15,924 - INFO - Fetched page with 10 records
+2026-03-20 13:47:15,925 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 13:47:16,743 - INFO - Fetched page with 10 records
+2026-03-20 13:47:16,744 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 13:47:17,560 - INFO - Fetched page with 10 records
+2026-03-20 13:47:17,561 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 13:47:18,295 - INFO - Fetched page with 10 records
+2026-03-20 13:47:18,296 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 13:47:18,986 - INFO - Fetched page with 10 records
+2026-03-20 13:47:18,987 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 13:47:19,712 - INFO - Fetched page with 10 records
+2026-03-20 13:47:19,713 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 13:47:20,428 - INFO - Fetched page with 10 records
+2026-03-20 13:47:20,429 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 13:47:21,760 - INFO - Fetched page with 10 records
+2026-03-20 13:47:21,761 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 13:47:22,475 - INFO - Fetched page with 10 records
+2026-03-20 13:47:22,476 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 13:47:23,193 - INFO - Fetched page with 10 records
+2026-03-20 13:47:23,194 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 13:47:24,730 - INFO - Fetched page with 10 records
+2026-03-20 13:47:24,731 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 13:47:25,453 - INFO - Fetched page with 10 records
+2026-03-20 13:47:25,454 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 13:47:26,166 - INFO - Fetched page with 10 records
+2026-03-20 13:47:26,168 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 13:47:26,881 - INFO - Fetched page with 10 records
+2026-03-20 13:47:26,881 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 13:47:27,507 - INFO - Fetched page with 10 records
+2026-03-20 13:47:27,507 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 13:47:28,213 - INFO - Fetched page with 10 records
+2026-03-20 13:47:28,214 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 13:47:28,927 - INFO - Fetched page with 10 records
+2026-03-20 13:47:28,928 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 13:47:29,645 - INFO - Fetched page with 10 records
+2026-03-20 13:47:29,645 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 13:47:30,362 - INFO - Fetched page with 1 records
+2026-03-20 13:47:30,411 - INFO - Pipeline completed: 251 records
+2026-03-20 13:58:57,553 - INFO - Starting pipeline system
+2026-03-20 13:58:57,557 - INFO - Running pipeline for posts
+2026-03-20 14:03:01,222 - INFO - Starting pipeline system
+2026-03-20 14:03:01,224 - INFO - Running pipeline for posts
+2026-03-20 14:03:01,224 - INFO - Last processed ID: 0
+2026-03-20 14:03:01,224 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 14:03:01,890 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 14:03:02,429 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 14:03:03,044 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 14:03:03,507 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 14:03:03,862 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 14:03:04,375 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 14:03:04,786 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 14:03:05,186 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 14:03:05,526 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 14:03:05,872 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 14:03:06,228 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 14:03:06,573 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 14:03:06,913 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 14:03:07,264 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 14:03:07,634 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 14:03:07,992 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 14:03:08,377 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 14:03:08,728 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 14:03:09,076 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 14:03:09,428 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 14:03:09,900 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 14:03:10,262 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 14:03:10,600 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 14:03:10,994 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 14:03:11,343 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 14:03:11,697 - INFO - Updated last_id to 251
+2026-03-20 16:43:53,836 - INFO - Starting pipeline system
+2026-03-20 16:43:53,868 - INFO - Running pipeline for posts
+2026-03-20 16:49:40,940 - INFO - Starting pipeline system
+2026-03-20 16:49:40,951 - INFO - Running pipeline for posts
+2026-03-20 16:49:40,956 - INFO - Last ID: 100, Last Timestamp: None
+2026-03-20 16:49:40,956 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=0
+2026-03-20 16:49:41,838 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=10
+2026-03-20 16:49:42,449 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=20
+2026-03-20 16:49:42,958 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=30
+2026-03-20 16:49:43,693 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=40
+2026-03-20 16:49:44,501 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=50
+2026-03-20 16:49:45,223 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=60
+2026-03-20 16:49:45,837 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=70
+2026-03-20 16:49:46,559 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=80
+2026-03-20 16:49:47,274 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=90
+2026-03-20 16:49:47,775 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=100
+2026-03-20 16:49:48,491 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=110
+2026-03-20 16:49:49,063 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=120
+2026-03-20 16:49:49,619 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=130
+2026-03-20 16:49:50,236 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=140
+2026-03-20 16:49:50,948 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=150
+2026-03-20 16:49:51,460 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=160
+2026-03-20 16:49:51,971 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=170
+2026-03-20 16:49:52,586 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=180
+2026-03-20 16:49:53,095 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=190
+2026-03-20 16:49:53,680 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=200
+2026-03-20 16:49:54,224 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=210
+2026-03-20 16:49:55,249 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=220
+2026-03-20 16:49:55,864 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=230
+2026-03-20 16:49:56,477 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=240
+2026-03-20 16:49:56,990 - INFO - Calling API: https://dummyjson.com/posts?limit=10&skip=250
+2026-03-20 16:49:57,636 - INFO - Updated last_id to 251
+2026-03-20 18:45:43,470 - INFO - Starting pipeline system
+2026-03-20 18:45:43,909 - INFO - Running SOAP pipeline for calculator
+2026-03-20 18:45:43,910 - INFO - Calling SOAP method: Add
+2026-03-20 18:58:35,532 - INFO - Starting pipeline system
+2026-03-20 19:02:55,690 - INFO - Starting pipeline system
+2026-03-20 19:02:56,305 - INFO - Running SOAP pipeline for calculator
+2026-03-20 19:02:56,306 - INFO - Calling SOAP method: Add
+2026-03-20 19:02:56,466 - INFO - SOAP pipeline completed with 1 records
