@@ -4,6 +4,7 @@ import yaml
 from datetime import datetime
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.providers.slack.operators.slack_webhook import SlackWebhookOperator
 
 # ---------------------------------------------------
 # Fix import paths
@@ -16,15 +17,30 @@ from src.utils.alerts import send_slack_alert
 # ---------------------------------------------------
 # Failure Alert
 # ---------------------------------------------------
-def task_failure_alert(context):
-    task_instance = context.get("task_instance")
 
-    send_slack_alert(
-        message=str(context.get("exception")),
-        dag_id=context.get("dag").dag_id,
-        task_id=task_instance.task_id,
-        log_url=task_instance.log_url
+def slack_fail_alert(context):
+    ti = context.get("task_instance")
+    dag_id = ti.dag_id
+    task_id = ti.task_id
+    execution_date = context.get("execution_date")
+    exception = context.get("exception")
+
+    log_url = ti.log_url
+
+    message = (
+        f"🚨 *Airflow Task Failed*\n"
+        f"*DAG:* {dag_id}\n"
+        f"*Task:* {task_id}\n"
+        f"*Time:* {execution_date}\n"
+        f"*Error:* {exception}\n"
+        f"*Logs:* <{log_url}|View Logs>"
     )
+
+    SlackWebhookOperator(
+        task_id='slack_alert',
+        slack_webhook_conn_id='slack_webhook',
+        message=message,
+    ).execute(context=context)
 
 # ---------------------------------------------------
 # Load config
@@ -44,9 +60,7 @@ config = load_config()
 # Default args (FIXED HERE)
 # ---------------------------------------------------
 default_args = {
-    "owner": "San",
-    "retries": 2,
-    "on_failure_callback": task_failure_alert  
+    'on_failure_callback': slack_fail_alert
 }
 
 # ---------------------------------------------------
