@@ -41,7 +41,16 @@ It simulates a **real-world data engineering system** with modular design, obser
 
 * Structured logging across pipeline
 * Airflow UI monitoring
-* Slack alerts on task failure (real-time)
+* Slack alerts on task failure (real-time) — includes DAG, task, time, error, and clickable log link
+
+### ☁️ Azure-Native Migration (NEW 🚀)
+
+* **Azure Blob Storage** — Raw JSON + processed CSV in `raw/` and `processed/` containers
+* **Azure Data Factory (ADF)** — Pipeline orchestration with Copy Activity + Mapping Data Flows + daily schedule trigger
+* **Azure Key Vault** — Secure secrets management (Slack webhook, storage connection string)
+* **Azure Container Registry (ACR)** — Dockerized pipeline image
+* **Mapping Data Flows** — JSON flattening, column selection, deduplication for posts/comments/users
+* SOAP XML response parsed to clean numeric result and stored as CSV
 
 ### 🧩 Architecture Design
 
@@ -57,6 +66,8 @@ It simulates a **real-world data engineering system** with modular design, obser
 ---
 
 ## 🏗️ Architecture
+
+### Local (Airflow + Docker)
 
 ```plaintext
 REST APIs ───────┐
@@ -78,21 +89,50 @@ Transformer   Data Quality   Metadata
 SOAP API ──► SOAP Client ──► Same Pipeline
 ```
 
----
-
-## 🔄 Airflow DAG Workflow (NEW)
+### Azure-Native (ADF + Blob Storage)
 
 ```plaintext
-rest_posts
-rest_users
-rest_comments
-        ↓
-   soap_calculator
+REST APIs ──► ADF Copy Activity ──► Azure Blob (raw/)
+                                         │
+                                         ▼
+                                 Mapping Data Flow
+                                 (flatten, select, dedup)
+                                         │
+                                         ▼
+                                 Azure Blob (processed/)
+
+SOAP API ──► ADF Web Activity ──► Parse XML ──► Azure Blob (raw/ + processed/)
+
+Any Failure ──► Slack Alert (ADF Web Activity)
+Daily Schedule ──► ADF Trigger ──► Full Pipeline
+```
+
+---
+
+## 🔄 Workflow
+
+### Airflow DAG (Local)
+
+```plaintext
+rest_posts ──┐
+rest_users ──┼──► soap_calculator
+rest_comments┘
 ```
 
 * REST tasks run **in parallel**
 * SOAP runs **after REST completion**
 * Fully **dynamic DAG based on config**
+
+### ADF Pipeline (Azure) — 9 Activities
+
+```plaintext
+IngestPosts ──► TransformPosts
+IngestComments ──► TransformComments
+IngestUsers ──► TransformUsers
+IngestUsers ──► SOAPCalculator ──► SaveSOAPResult ──► TransformSOAP
+
+Any failure ──► SlackAlertOnFailure
+```
 
 ---
 
@@ -103,17 +143,35 @@ api_ingestion_engine/
 │
 ├── src/
 │   ├── ingestion/
+│   │   ├── api_client_v3.py          # REST client with pagination + retry
+│   │   ├── soap_client.py            # SOAP client (zeep)
+│   │   ├── pipeline.py               # Core pipeline logic
+│   │   ├── pipeline_runner.py        # Local runner
+│   │   └── pipeline_runner_azure.py  # Azure Blob runner
 │   ├── processors/
-│   ├── utils/
-│   └── config/
+│   │   └── transformer_v1.py         # Pandas transformer
+│   └── utils/
+│       ├── storage.py                # Local file storage
+│       ├── storage_azure.py          # Azure Blob Storage
+│       ├── metadata.py               # Watermark tracking
+│       ├── data_quality.py           # Validation checks
+│       ├── alerts.py                 # Slack alerts
+│       ├── retry.py                  # Exponential backoff
+│       └── logger.py                 # Structured logging
+│
+├── dags/
+│   ├── api_ingestion_dynamic_dag.py  # Airflow DAG (local)
+│   └── api_ingestion_azure_dag.py    # Airflow DAG (Azure storage)
 │
 ├── airflow-docker/
-│   └── dags/
+│   ├── docker-compose.yaml           # Local Airflow setup
+│   └── docker-compose-azure.yaml     # Azure-integrated Airflow setup
 │
-├── tests/
-├── main_v6.py
+├── Dockerfile                        # Container image for pipeline
 ├── requirements.txt
-└── .github/workflows/
+├── main_v6.py
+├── tests/
+└── .github/workflows/pipeline.yml
 ```
 
 ---
@@ -127,18 +185,22 @@ python main_v6.py --mode rest --endpoint posts
 python main_v6.py --mode soap --endpoint calculator
 ```
 
----
-
 ### 🔹 Airflow (Docker)
 
 ```bash
+cd airflow-docker
 docker-compose up
 ```
 
-Access UI:
+Access UI: `http://localhost:8080`
 
-```plaintext
-http://localhost:8080
+### 🔹 Azure (ADF)
+
+```bash
+az datafactory pipeline create-run \
+  --resource-group api-ingestion-rg \
+  --factory-name apiingestionadf \
+  --name api-ingestion-pipeline
 ```
 
 ---
@@ -176,22 +238,34 @@ http://localhost:8080
 * CDC simulation
 * GitHub Actions
 
-### 🔥 v7 — Production Orchestration (CURRENT)
+### 🔥 v7 — Production Orchestration
 
 * Airflow DAG (dynamic)
 * Parallel task execution
 * Data quality validation layer
-* Slack alert integration
+* Slack alert integration (DAG, task, time, error, log link)
 * Dockerized orchestration
+
+### 🔥 v8 — Azure-Native Migration (CURRENT)
+
+* Azure Blob Storage (raw + processed layers)
+* Azure Data Factory — 9-activity pipeline with daily trigger
+* Azure Key Vault — secrets management
+* Azure Container Registry — Docker image hosting
+* Mapping Data Flows — JSON flattening, deduplication, CSV output
+* SOAP XML parsing within ADF expressions
+* Slack alerts from ADF on failure
 
 ---
 
 ## 📊 Outputs
 
-* Raw → `data/raw/`
-* Processed → `data/processed/`
-* Metadata → `data/metadata.json`
-* Logs → Airflow UI + local logs
+| Layer | Local | Azure |
+|---|---|---|
+| Raw | `data/raw/*.json` | `Azure Blob: raw/` |
+| Processed | `data/processed/*.csv` | `Azure Blob: processed/` |
+| Metadata | `data/metadata.json` | ADF pipeline run history |
+| Logs | Airflow UI + `logs/app.log` | ADF Monitor |
 
 ---
 
@@ -219,34 +293,38 @@ GitHub Actions:
 
 ## 🛠️ Tech Stack
 
-* Python
-* Pandas
-* Requests
-* Zeep (SOAP client)
-* Apache Airflow (Docker)
-* PyYAML
-* Pytest
-* GitHub Actions
-* Slack Webhooks
+| Category | Tools |
+|---|---|
+| Language | Python 3.11 |
+| Data | Pandas, Requests, Zeep |
+| Orchestration | Apache Airflow, Azure Data Factory |
+| Cloud | Azure Blob Storage, Azure Key Vault, Azure Container Registry |
+| Containerization | Docker, docker-compose |
+| CI/CD | GitHub Actions |
+| Alerting | Slack Webhooks |
+| Config | PyYAML |
+| Testing | Pytest |
 
 ---
 
 ## 📚 Key Learnings
 
-* Designing scalable ingestion pipelines
-* Handling REST + SOAP integration in one system
-* Implementing incremental + idempotent processing
-* Building dynamic Airflow DAGs
-* Adding production-grade observability and alerting
+* Designing scalable REST + SOAP ingestion pipelines
+* Implementing incremental + idempotent processing with watermarking
+* Building dynamic Airflow DAGs from config
+* Migrating a local pipeline to Azure-native stack (ADF + Blob + Key Vault)
+* Using ADF Mapping Data Flows for JSON flattening and transformation
+* Parsing SOAP XML responses within ADF expressions
+* Production-grade observability and alerting across local and cloud environments
 
 ---
 
 ## 🚀 Next Steps
 
-* Migrate to Azure (ADLS Gen2)
-* Integrate Azure Data Factory
-* Implement cloud-native orchestration
-* Add secrets management (Key Vault)
+* Migrate storage to ADLS Gen2 (hierarchical namespace)
+* Add Azure Synapse Analytics for querying processed data
+* Implement CI/CD for ADF pipelines
+* Add data lineage tracking
 
 ---
 
