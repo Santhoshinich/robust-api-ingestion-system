@@ -319,14 +319,6 @@ GitHub Actions:
 
 ---
 
-## 🚀 Next Steps
-
-* Migrate storage to ADLS Gen2 (hierarchical namespace)
-* Add Azure Synapse Analytics for querying processed data
-* Implement CI/CD for ADF pipelines
-* Add data lineage tracking
-
----
 
 ## 👨‍💻 Author
 
