@@ -324,4 +324,4 @@ GitHub Actions:
 
 Santhoshini ch
 
-Built as part of a **multi-cloud data engineering portfolio** focused on real-world system design and production readiness.
+Designed and implemented a cloud-based data engineering pipeline on Azure, focusing on production-grade architecture, orchestration, and data reliability.
